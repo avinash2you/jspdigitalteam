@@ -47,6 +47,12 @@ class MockStorageProvider:
     def delete_object(self, key: str) -> None:
         self.objects.pop(key, None)
 
+    def get_object(self, key: str) -> bytes:
+        if key in self.objects:
+            data, _ = self.objects[key]
+            return data
+        return b"%PDF-1.4 mock pdf data"
+
 
 class MockOCRProvider:
     """Deterministic mock OCR provider for unit testing."""

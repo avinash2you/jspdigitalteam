@@ -91,3 +91,9 @@ class R2StorageProvider(StorageProvider):
     def delete_object(self, key: str) -> None:
         """Permanently delete an object from Cloudflare R2."""
         self.client.delete_object(Bucket=self.bucket_name, Key=key)
+
+    def get_object(self, key: str) -> bytes:
+        """Download and return raw object bytes from Cloudflare R2."""
+        response: dict[str, Any] = self.client.get_object(Bucket=self.bucket_name, Key=key)
+        body = response["Body"]
+        return bytes(body.read())

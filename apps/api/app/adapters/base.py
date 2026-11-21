@@ -33,6 +33,10 @@ class StorageProvider(Protocol):
         """Permanently delete an object by key."""
         ...
 
+    def get_object(self, key: str) -> bytes:
+        """Download and return raw object bytes."""
+        ...
+
 
 # ============================================================================
 # OCR DTOs & Protocol
