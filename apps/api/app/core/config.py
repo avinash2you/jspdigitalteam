@@ -6,6 +6,12 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     ENVIRONMENT: str = "development"
 
+    # Adapter backend configurations
+    STORAGE_BACKEND: str = "mock"
+    OCR_BACKEND: str = "mock"
+    SEARCH_BACKEND: str = "mock"
+    AI_BACKEND: str = "mock"
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
