@@ -20,6 +20,12 @@ class Settings(BaseSettings):
     SEARCH_BACKEND: str = "mock"
     AI_BACKEND: str = "mock"
 
+    # Cloudflare R2 Storage Configuration
+    R2_ENDPOINT_URL: str = "https://placeholder-account-id.r2.cloudflarestorage.com"
+    R2_ACCESS_KEY_ID: str = "placeholder_r2_access_key"
+    R2_SECRET_ACCESS_KEY: str = "placeholder_r2_secret_key"
+    R2_BUCKET_NAME: str = "jsp-assets-dev"
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",

@@ -12,6 +12,7 @@ from app.adapters.base import (
     SearchResultItem,
     StorageProvider,
 )
+from app.adapters.storage_r2 import R2StorageProvider
 from app.core.config import settings
 
 # ============================================================================
@@ -145,8 +146,11 @@ def get_storage_provider(backend: str | None = None) -> StorageProvider:
     selected = (backend or settings.STORAGE_BACKEND).lower()
     if selected in ("mock", "memory"):
         return _storage_instances["mock"]
-    elif selected in ("r2", "minio", "s3"):
-        # Concrete implementation wired in T25
+    elif selected in ("r2", "cloudflare_r2"):
+        if "r2" not in _storage_instances:
+            _storage_instances["r2"] = R2StorageProvider()
+        return _storage_instances["r2"]
+    elif selected in ("minio", "s3"):
         raise NotImplementedError(
             f"Storage backend '{selected}' will be implemented in subsequent task."
         )

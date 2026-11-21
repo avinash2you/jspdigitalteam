@@ -125,8 +125,8 @@ def test_registry_raises_on_unknown_backend() -> None:
 
 
 def test_registry_raises_not_implemented_on_unwired_concrete_backends() -> None:
-    with pytest.raises(NotImplementedError, match="Storage backend 'r2'"):
-        get_storage_provider("r2")
+    with pytest.raises(NotImplementedError, match="Storage backend 'minio'"):
+        get_storage_provider("minio")
 
     with pytest.raises(NotImplementedError, match="OCR backend 'tesseract'"):
         get_ocr_provider("tesseract")
