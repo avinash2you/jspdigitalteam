@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from app.core.config import settings
 from app.routers.audit import router as audit_router
 from app.routers.me import router as me_router
+from app.routers.uploads import router as uploads_router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -11,6 +12,7 @@ app = FastAPI(
 
 app.include_router(me_router, prefix=settings.API_V1_STR)
 app.include_router(audit_router, prefix=settings.API_V1_STR)
+app.include_router(uploads_router, prefix=settings.API_V1_STR)
 
 
 @app.get("/health")
