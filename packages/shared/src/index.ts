@@ -54,4 +54,25 @@ export interface GeoEntity {
   matched_alias?: string | null;
 }
 
+export interface NewspaperClippingItem {
+  id: string;
+  headline: string;
+  newspaper_name: string;
+  edition?: string | null;
+  publication_date: string;
+  page_number?: number | string | null;
+  extracted_text?: string | null;
+  geo_tags: GeoEntity[];
+  preview_url: string;
+  created_at: string;
+}
+
+export interface NewspaperListResponse {
+  items: NewspaperClippingItem[];
+  total: number;
+  page: number;
+  page_size: number;
+  total_pages: number;
+}
+
 export * from './schemas/assetMetadata';

@@ -56,7 +56,7 @@ export function AppShell({ role, userEmail, children }: AppShellProps) {
             Digital Repository
           </Link>
           <Link
-            href="/newspaper-archive"
+            href="/newspapers"
             data-testid="nav-newspaper-archive"
             style={{ color: '#e5e7eb', textDecoration: 'none', padding: '0.5rem', borderRadius: '4px' }}
           >
