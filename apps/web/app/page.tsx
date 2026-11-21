@@ -1,11 +1,12 @@
 import React from 'react';
 import { UserRole } from '@jsp/shared';
+import { AppShell } from '@/components/AppShell';
 
 export default function HomePage() {
   return (
-    <main style={{ padding: '2rem', fontFamily: 'system-ui, sans-serif' }}>
+    <AppShell role={UserRole.VIEWER} userEmail="guest@jsp.internal">
       <h1>JSP Digital Intelligence Platform</h1>
-      <p>Default Role: {UserRole.VIEWER}</p>
-    </main>
+      <p>Welcome to the private intelligence repository and analytical workspace.</p>
+    </AppShell>
   );
 }
