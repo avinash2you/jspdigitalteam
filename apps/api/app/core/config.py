@@ -6,6 +6,9 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     ENVIRONMENT: str = "development"
 
+    # Database configuration (PostgreSQL 16 + pgvector)
+    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/jsp_intel"
+
     # Adapter backend configurations
     STORAGE_BACKEND: str = "mock"
     OCR_BACKEND: str = "mock"
