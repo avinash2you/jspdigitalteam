@@ -6,6 +6,7 @@ from app.routers.audit import router as audit_router
 from app.routers.extraction import router as extraction_router
 from app.routers.geography import router as geography_router
 from app.routers.me import router as me_router
+from app.routers.newspapers import router as newspapers_router
 from app.routers.uploads import router as uploads_router
 
 app = FastAPI(
@@ -19,6 +20,7 @@ app.include_router(uploads_router, prefix=settings.API_V1_STR)
 app.include_router(geography_router, prefix=settings.API_V1_STR)
 app.include_router(assets_router, prefix=settings.API_V1_STR)
 app.include_router(extraction_router, prefix=settings.API_V1_STR)
+app.include_router(newspapers_router, prefix=settings.API_V1_STR)
 
 
 @app.get("/health")

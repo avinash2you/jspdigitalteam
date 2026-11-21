@@ -36,6 +36,14 @@ extend-immutable-calls = [
   "fastapi.Security",
   "fastapi.params.Depends",
   "fastapi.params.Security",
+  "fastapi.Query",
+  "fastapi.params.Query",
+  "fastapi.Path",
+  "fastapi.params.Path",
+  "fastapi.Body",
+  "fastapi.params.Body",
+  "fastapi.Header",
+  "fastapi.params.Header",
 ]
 
 [tool.mypy]
