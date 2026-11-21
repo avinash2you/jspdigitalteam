@@ -20,6 +20,7 @@ from app.db.base import Base
 
 if TYPE_CHECKING:
     from app.models.document_chunk import DocumentChunk
+    from app.models.geography import GeoEntity
     from app.models.user import User
 
 
@@ -170,6 +171,9 @@ class Asset(Base):
         foreign_keys="AssetRelationship.target_asset_id",
         back_populates="target_asset",
         cascade="all, delete-orphan",
+    )
+    geo_entities: Mapped[list["GeoEntity"]] = relationship(
+        "GeoEntity", secondary="asset_geo_tags", back_populates="assets", lazy="selectin"
     )
 
 
