@@ -1,0 +1,11 @@
+{
+  "name": "jspdigitalteam-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "pnpm --filter web lint",
+    "typecheck": "pnpm --filter web typecheck",
+    "test": "pnpm --filter web test"
+  },
+  "packageManager": "pnpm@12.21.0"
+}
