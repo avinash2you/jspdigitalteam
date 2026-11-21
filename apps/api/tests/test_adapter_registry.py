@@ -128,8 +128,8 @@ def test_registry_raises_not_implemented_on_unwired_concrete_backends() -> None:
     with pytest.raises(NotImplementedError, match="Storage backend 'minio'"):
         get_storage_provider("minio")
 
-    with pytest.raises(NotImplementedError, match="OCR backend 'tesseract'"):
-        get_ocr_provider("tesseract")
+    with pytest.raises(NotImplementedError, match="OCR backend 'document_ai'"):
+        get_ocr_provider("document_ai")
 
     with pytest.raises(NotImplementedError, match="Search backend 'postgres_hybrid'"):
         get_search_provider("postgres_hybrid")

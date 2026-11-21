@@ -161,8 +161,14 @@ def get_ocr_provider(backend: str | None = None) -> OCRProvider:
     selected = (backend or settings.OCR_BACKEND).lower()
     if selected in ("mock", "memory"):
         return _ocr_instances["mock"]
-    elif selected in ("tesseract", "document_ai"):
-        # Concrete implementation wired in T19 / T20
+    elif selected in ("tesseract", "pytesseract"):
+        if "tesseract" not in _ocr_instances:
+            from app.adapters.ocr_tesseract import TesseractOCRProvider
+
+            _ocr_instances["tesseract"] = TesseractOCRProvider()
+        return _ocr_instances["tesseract"]
+    elif selected in ("document_ai", "cloud_document_ai"):
+        # Concrete implementation in Milestone 2
         raise NotImplementedError(
             f"OCR backend '{selected}' will be implemented in subsequent task."
         )
