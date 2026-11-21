@@ -192,7 +192,14 @@ def get_ai_provider(backend: str | None = None) -> AIProvider:
     if selected in ("mock", "memory"):
         return _ai_instances["mock"]
     elif selected in ("gemini_free", "gemini_paid", "gemini"):
-        # Concrete implementation wired in T20
+        cache_key = f"gemini_{selected}"
+        if cache_key not in _ai_instances:
+            from app.adapters.ai_gemini import GeminiAIProvider
+
+            tier = "paid" if selected == "gemini_paid" else "free"
+            _ai_instances[cache_key] = GeminiAIProvider(tier=tier)
+        return _ai_instances[cache_key]
+    elif selected in ("openai", "claude"):
         raise NotImplementedError(
             f"AI backend '{selected}' will be implemented in subsequent task."
         )

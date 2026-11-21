@@ -134,5 +134,5 @@ def test_registry_raises_not_implemented_on_unwired_concrete_backends() -> None:
     with pytest.raises(NotImplementedError, match="Search backend 'postgres_hybrid'"):
         get_search_provider("postgres_hybrid")
 
-    with pytest.raises(NotImplementedError, match="AI backend 'gemini_free'"):
-        get_ai_provider("gemini_free")
+    with pytest.raises(NotImplementedError, match="AI backend 'openai'"):
+        get_ai_provider("openai")

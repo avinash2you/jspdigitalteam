@@ -26,6 +26,11 @@ class Settings(BaseSettings):
     R2_SECRET_ACCESS_KEY: str = "placeholder_r2_secret_key"
     R2_BUCKET_NAME: str = "jsp-assets-dev"
 
+    # Gemini AI Configuration
+    GEMINI_API_KEY: str | None = None
+    GEMINI_MODEL: str = "gemini-2.5-flash"
+    GEMINI_TIER: str = "free"  # "free" | "paid"
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
