@@ -8,6 +8,13 @@ export enum UserRole {
 }
 
 export enum AssetType {
+  GOVERNMENT_DOCUMENT = 'government_document',
+  NEWSPAPER_CLIPPING = 'newspaper_clipping',
+  ONLINE_NEWS_SOCIAL = 'online_news_social',
+  VIDEO_AUDIO = 'video_audio',
+  IMAGE_INFOGRAPHIC = 'image_infographic',
+  RESEARCH_MATERIAL = 'research_material',
+  // Legacy aliases
   DOCUMENT = 'document',
   IMAGE = 'image',
   VIDEO = 'video',
@@ -46,3 +53,5 @@ export interface GeoEntity {
   is_historical?: boolean;
   matched_alias?: string | null;
 }
+
+export * from './schemas/assetMetadata';
