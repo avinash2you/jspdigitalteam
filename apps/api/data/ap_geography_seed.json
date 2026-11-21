@@ -1,0 +1,356 @@
+{
+  "entities": [
+    {
+      "code": "IND",
+      "name": "India",
+      "telugu_name": "భారతదేశం",
+      "tier": "india",
+      "parent_code": null,
+      "is_historical": false
+    },
+    {
+      "code": "AP",
+      "name": "Andhra Pradesh",
+      "telugu_name": "ఆంధ్రప్రదేశ్",
+      "tier": "state",
+      "parent_code": "IND",
+      "is_historical": false
+    },
+    {
+      "code": "AP-SKL",
+      "name": "Srikakulam",
+      "telugu_name": "శ్రీకాకుళం",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-VZM",
+      "name": "Vizianagaram",
+      "telugu_name": "విజయనగరం",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-PKM",
+      "name": "Parvathipuram Manyam",
+      "telugu_name": "పార్వతీపురం మన్యం",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-ASR",
+      "name": "Alluri Sitharama Raju",
+      "telugu_name": "అల్లూరి సీతారామరాజు",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-VSP",
+      "name": "Visakhapatnam",
+      "telugu_name": "విశాఖపట్నం",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-AKP",
+      "name": "Anakapalli",
+      "telugu_name": "అనకాపల్లి",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-KKD",
+      "name": "Kakinada",
+      "telugu_name": "కాకినాడ",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-KNS",
+      "name": "Dr. B.R. Ambedkar Konaseema",
+      "telugu_name": "డా. బి.ఆర్. అంబేద్కర్ కోనసీమ",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-EGD",
+      "name": "East Godavari",
+      "telugu_name": "తూర్పు గోదావరి",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-WGD",
+      "name": "West Godavari",
+      "telugu_name": "పశ్చిమ గోదావరి",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-ELR",
+      "name": "Eluru",
+      "telugu_name": "ఏలూరు",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-KRI",
+      "name": "Krishna",
+      "telugu_name": "కృష్ణా",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-NTR",
+      "name": "NTR",
+      "telugu_name": "ఎన్టీఆర్",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-GNT",
+      "name": "Guntur",
+      "telugu_name": "గుంటూరు",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-BPT",
+      "name": "Bapatla",
+      "telugu_name": "బాపట్ల",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-PLN",
+      "name": "Palnadu",
+      "telugu_name": "పల్నాడు",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-PRA",
+      "name": "Prakasam",
+      "telugu_name": "ప్రకాశం",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-NLR",
+      "name": "Sri Potti Sriramulu Nellore",
+      "telugu_name": "శ్రీ పొట్టి శ్రీరాములు నెల్లూరు",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-KNL",
+      "name": "Kurnool",
+      "telugu_name": "కర్నూలు",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-NDL",
+      "name": "Nandyal",
+      "telugu_name": "నంద్యాల",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-ATP",
+      "name": "Ananthapuramu",
+      "telugu_name": "అనంతపురం",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-SSS",
+      "name": "Sri Sathya Sai",
+      "telugu_name": "శ్రీ సత్యసాయి",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-KDP",
+      "name": "YSR Kadapa",
+      "telugu_name": "వైఎస్సార్ కడప",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-AMY",
+      "name": "Annamayya",
+      "telugu_name": "అన్నమయ్య",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-TPT",
+      "name": "Tirupati",
+      "telugu_name": "తిరుపతి",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-CTR",
+      "name": "Chittoor",
+      "telugu_name": "చిత్తూరు",
+      "tier": "district",
+      "parent_code": "AP",
+      "is_historical": false
+    },
+    {
+      "code": "AP-PC-08",
+      "name": "Rajahmundry Parliamentary Constituency",
+      "telugu_name": "రాజమండ్రి లోక్‌సభ నియోజకవర్గం",
+      "tier": "parliamentary_constituency",
+      "parent_code": "AP-EGD",
+      "is_historical": false
+    },
+    {
+      "code": "AP-AC-054",
+      "name": "Kovvur Assembly Constituency",
+      "telugu_name": "కొవ్వూరు శాసనసభ నియోజకవర్గం",
+      "tier": "assembly_constituency",
+      "parent_code": "AP-EGD",
+      "is_historical": false
+    },
+    {
+      "code": "AP-MDL-KOV",
+      "name": "Kovvur Mandal",
+      "telugu_name": "కొవ్వూరు మండలం",
+      "tier": "mandal",
+      "parent_code": "AP-AC-054",
+      "is_historical": false
+    },
+    {
+      "code": "AP-VIL-KOV",
+      "name": "Kovvur Rural Village",
+      "telugu_name": "కొవ్వూరు గ్రామీణ గ్రామం",
+      "tier": "village",
+      "parent_code": "AP-MDL-KOV",
+      "is_historical": false
+    },
+    {
+      "code": "AP-MC-RJY",
+      "name": "Rajahmundry Municipal Corporation",
+      "telugu_name": "రాజమండ్రి నగర పాలక సంస్థ",
+      "tier": "municipal_corporation",
+      "parent_code": "AP-EGD",
+      "is_historical": false
+    },
+    {
+      "code": "AP-MN-KOV",
+      "name": "Kovvur Municipality",
+      "telugu_name": "కొవ్వూరు పురపాలక సంఘం",
+      "tier": "municipality",
+      "parent_code": "AP-AC-054",
+      "is_historical": false
+    },
+    {
+      "code": "AP-WD-KOV-01",
+      "name": "Ward 1 Kovvur",
+      "telugu_name": "వార్డు 1 కొవ్వూరు",
+      "tier": "ward",
+      "parent_code": "AP-MN-KOV",
+      "is_historical": false
+    }
+  ],
+  "aliases": [
+    {
+      "alias_name": "Srikakulam (Undivided)",
+      "mapped_entity_code": "AP-SKL",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "Vizianagaram (Undivided)",
+      "mapped_entity_code": "AP-VZM",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "Visakhapatnam (Undivided)",
+      "mapped_entity_code": "AP-VSP",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "East Godavari (Undivided)",
+      "mapped_entity_code": "AP-EGD",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "West Godavari (Undivided)",
+      "mapped_entity_code": "AP-WGD",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "West Godavari (Undivided)",
+      "mapped_entity_code": "AP-AC-054",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "Krishna (Undivided)",
+      "mapped_entity_code": "AP-KRI",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "Guntur (Undivided)",
+      "mapped_entity_code": "AP-GNT",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "Prakasam (Undivided)",
+      "mapped_entity_code": "AP-PRA",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "Nellore (Undivided)",
+      "mapped_entity_code": "AP-NLR",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "Kurnool (Undivided)",
+      "mapped_entity_code": "AP-KNL",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "Anantapur (Undivided)",
+      "mapped_entity_code": "AP-ATP",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "YSR Kadapa (Undivided)",
+      "mapped_entity_code": "AP-KDP",
+      "valid_until_year": 2022
+    },
+    {
+      "alias_name": "Chittoor (Undivided)",
+      "mapped_entity_code": "AP-CTR",
+      "valid_until_year": 2022
+    }
+  ]
+}
