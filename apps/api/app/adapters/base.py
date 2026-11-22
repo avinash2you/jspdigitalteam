@@ -1,3 +1,4 @@
+import uuid
 from typing import Any, Protocol, runtime_checkable
 
 from pydantic import BaseModel, Field
@@ -79,9 +80,14 @@ class AssetSearchDocument(BaseModel):
 
 class SearchFilters(BaseModel):
     asset_type: str | None = None
+    asset_types: list[str] = Field(default_factory=list)
     tags: list[str] = Field(default_factory=list)
     start_date: str | None = None
     end_date: str | None = None
+    date_from: str | None = None
+    date_to: str | None = None
+    geo_ids: list[uuid.UUID] = Field(default_factory=list)
+    department: str | None = None
 
 
 class SearchResultItem(BaseModel):
@@ -90,6 +96,12 @@ class SearchResultItem(BaseModel):
     snippet: str
     score: float
     asset_type: str
+    headline: str | None = None
+    highlighted_snippet: str | None = None
+    go_number: str | None = None
+    publication_date: str | None = None
+    source_name: str | None = None
+    geo_tags: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class SearchResponse(BaseModel):

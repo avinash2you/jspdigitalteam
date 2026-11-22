@@ -124,6 +124,18 @@ def test_registry_raises_on_unknown_backend() -> None:
         get_ai_provider("unsupported_backend")
 
 
+def test_registry_selects_postgres_search_provider() -> None:
+    from app.adapters.search_postgres import PostgresHybridSearchProvider
+
+    provider = get_search_provider("postgres")
+    assert isinstance(provider, SearchProvider)
+    assert isinstance(provider, PostgresHybridSearchProvider)
+
+    provider_hybrid = get_search_provider("postgres_hybrid")
+    assert isinstance(provider_hybrid, SearchProvider)
+    assert isinstance(provider_hybrid, PostgresHybridSearchProvider)
+
+
 def test_registry_raises_not_implemented_on_unwired_concrete_backends() -> None:
     with pytest.raises(NotImplementedError, match="Storage backend 'minio'"):
         get_storage_provider("minio")
@@ -131,8 +143,8 @@ def test_registry_raises_not_implemented_on_unwired_concrete_backends() -> None:
     with pytest.raises(NotImplementedError, match="OCR backend 'document_ai'"):
         get_ocr_provider("document_ai")
 
-    with pytest.raises(NotImplementedError, match="Search backend 'postgres_hybrid'"):
-        get_search_provider("postgres_hybrid")
+    with pytest.raises(NotImplementedError, match="Search backend 'meilisearch'"):
+        get_search_provider("meilisearch")
 
     with pytest.raises(NotImplementedError, match="AI backend 'openai'"):
         get_ai_provider("openai")

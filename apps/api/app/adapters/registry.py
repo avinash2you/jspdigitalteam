@@ -185,8 +185,13 @@ def get_search_provider(backend: str | None = None) -> SearchProvider:
     selected = (backend or settings.SEARCH_BACKEND).lower()
     if selected in ("mock", "memory"):
         return _search_instances["mock"]
-    elif selected in ("postgres_hybrid", "postgres", "meilisearch"):
-        # Concrete implementation wired in T10
+    elif selected in ("postgres_hybrid", "postgres"):
+        if "postgres" not in _search_instances:
+            from app.adapters.search_postgres import PostgresHybridSearchProvider
+
+            _search_instances["postgres"] = PostgresHybridSearchProvider()
+        return _search_instances["postgres"]
+    elif selected in ("meilisearch",):
         raise NotImplementedError(
             f"Search backend '{selected}' will be implemented in subsequent task."
         )
