@@ -75,4 +75,27 @@ export interface NewspaperListResponse {
   total_pages: number;
 }
 
+export interface SearchResultItem {
+  id: string;
+  title: string;
+  snippet: string;
+  score: number;
+  asset_type: AssetType | string;
+  headline?: string | null;
+  highlighted_snippet?: string | null;
+  go_number?: string | null;
+  publication_date?: string | null;
+  source_name?: string | null;
+  preview_url?: string | null;
+  geo_tags: GeoEntity[];
+}
+
+export interface SearchPaginationResponse {
+  items: SearchResultItem[];
+  total: number;
+  page: number;
+  page_size: number;
+  total_pages: number;
+}
+
 export * from './schemas/assetMetadata';
