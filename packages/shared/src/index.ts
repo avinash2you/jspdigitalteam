@@ -98,4 +98,70 @@ export interface SearchPaginationResponse {
   total_pages: number;
 }
 
+export enum RelationType {
+  AMENDS = 'amends',
+  SUPERSEDES = 'supersedes',
+  CLARIFIES = 'clarifies',
+  RELATED = 'related',
+}
+
+export enum CopyrightFlag {
+  PUBLIC_DOMAIN = 'public_domain',
+  INTERNAL_RESEARCH_ONLY = 'internal_research_only',
+  RESTRICTED_COPYRIGHT = 'restricted_copyright',
+}
+
+export interface UploaderSummary {
+  id: string;
+  full_name?: string | null;
+  email: string;
+  role: UserRole;
+}
+
+export interface RelationshipSummary {
+  id: string;
+  relation_type: RelationType | string;
+  direction: 'outgoing' | 'incoming' | string;
+  source_asset_id: string;
+  target_asset_id: string;
+  related_asset_id: string;
+  related_asset_title: string;
+  related_asset_type: AssetType | string;
+  created_at: string;
+}
+
+export interface AssetDetailResponse {
+  id: string;
+  title: string;
+  asset_type: AssetType | string;
+  primary_language: string;
+  source_name?: string | null;
+  source_url?: string | null;
+  r2_object_key: string;
+  file_sha256: string;
+  mime_type: string;
+  file_size_bytes: number;
+  go_number?: string | null;
+  copyright_flag: CopyrightFlag | string;
+  is_public_record: boolean;
+  extracted_text?: string | null;
+  english_summary?: string | null;
+  tenglish_keywords: string[];
+  subject_tags: string[];
+  dynamic_metadata: Record<string, any>;
+  status: string;
+  verification_status: VerificationStatus | string;
+  uploaded_by?: string | null;
+  uploader?: UploaderSummary | null;
+  geo_entities: GeoEntity[];
+  relationships: RelationshipSummary[];
+  created_at: string;
+  updated_at: string;
+}
+
+export interface DownloadUrlResponse {
+  download_url: string;
+  expires_in: number;
+}
+
 export * from './schemas/assetMetadata';
