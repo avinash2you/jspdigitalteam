@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     # Adapter backend configurations
     STORAGE_BACKEND: str = "mock"
     OCR_BACKEND: str = "mock"
-    SEARCH_BACKEND: str = "mock"
+    SEARCH_BACKEND: str = "postgres"
     AI_BACKEND: str = "mock"
 
     # Cloudflare R2 Storage Configuration

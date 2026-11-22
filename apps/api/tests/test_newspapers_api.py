@@ -182,10 +182,10 @@ async def test_newspaper_filtering_and_exclusion_of_other_asset_types() -> None:
         headers = {"Authorization": f"Bearer {token}"}
 
         # 1. Base list: returns all published newspaper clippings, excludes drafts and gov docs
-        res_all = await client.get("/api/v1/newspapers", headers=headers)
+        res_all = await client.get(f"/api/v1/newspapers?newspaper_name={test_run_id}", headers=headers)
         assert res_all.status_code == 200
         data_all = res_all.json()
-        assert data_all["total"] >= 3
+        assert data_all["total"] == 3
         # Ensure non-clippings and drafts are excluded
         returned_ids = {item["id"] for item in data_all["items"]}
         assert str(c4_draft.id) not in returned_ids

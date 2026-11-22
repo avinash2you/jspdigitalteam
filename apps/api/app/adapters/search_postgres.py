@@ -248,6 +248,10 @@ class PostgresHybridSearchProvider:
                     )
                 )
 
+            # Verification status filter
+            if filters.verification_status:
+                where_clauses.append(Asset.verification_status == filters.verification_status)
+
             # Subject / Tenglish tags filter
             if filters.tags:
                 where_clauses.append(
@@ -419,6 +423,15 @@ class PostgresHybridSearchProvider:
             for g in (asset.geo_entities or [])
         ]
 
+        from app.adapters.registry import get_storage_provider
+
+        storage = get_storage_provider()
+        preview_url = (
+            storage.generate_download_url(asset.r2_object_key, expires_sec=300)
+            if asset.r2_object_key
+            else None
+        )
+
         return SearchResultItem(
             id=str(asset.id),
             title=asset.title,
@@ -430,5 +443,6 @@ class PostgresHybridSearchProvider:
             go_number=asset.go_number,
             publication_date=str(pub_date) if pub_date else None,
             source_name=asset.source_name or meta.get("newspaper_name") or meta.get("platform_publisher"),
+            preview_url=preview_url,
             geo_tags=geo_summaries,
         )

@@ -88,6 +88,7 @@ class SearchFilters(BaseModel):
     date_to: str | None = None
     geo_ids: list[uuid.UUID] = Field(default_factory=list)
     department: str | None = None
+    verification_status: str | None = None
 
 
 class SearchResultItem(BaseModel):
@@ -101,6 +102,7 @@ class SearchResultItem(BaseModel):
     go_number: str | None = None
     publication_date: str | None = None
     source_name: str | None = None
+    preview_url: str | None = None
     geo_tags: list[dict[str, Any]] = Field(default_factory=list)
 
 
